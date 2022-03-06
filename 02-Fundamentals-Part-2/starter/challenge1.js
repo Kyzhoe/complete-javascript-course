@@ -6,7 +6,7 @@ const avgDolphins = calcAverage(85, 54, 41);
 const avgKoalas = calcAverage(23, 34, 27);
 console.log(avgDolphins, avgKoalas);
 
-function checkWinner(avgDolphins, avgKoalas) {
+const checkWinner = function (avgDolphins, avgKoalas) {
     if (avgDolphins > avgKoalas && avgDolphins > (avgKoalas * 2)) {
         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
     } else if (avgDolphins > avgKoalas && avgDolphins < (avgKoalas * 2)) {
