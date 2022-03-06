@@ -1,6 +1,6 @@
 const country = 'The United States';
 const continent = 'North America';
-let population = 40;
+let population = 330;
 
 console.log(country, continent, population);
 
@@ -41,8 +41,7 @@ const lessThanAverage = averagePopulation - population;
 
 const newCountryPopulation = 49;
 const newCountryLanguage = `English`;
-const newCountryIsland = false;
-if (population < newCountryPopulation && language === newCountryLanguage && isIsland === newCountryIsland) {
+if (population < newCountryPopulation && language === newCountryLanguage && !isIsland) {
     console.log(`You should live in ${country}!`);
 } else console.log(`${country} does not meet your criteria :(`);
 
