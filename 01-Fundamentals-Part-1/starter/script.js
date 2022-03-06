@@ -261,5 +261,42 @@ if (day === `monday`) {
 } else if (day === `saturday` || day === `sunday`) {
     console.log(`Enjoy the weekend :D`);
 } else console.log(`Not a valid day!`);
-*/
 
+
+// Expressions are the words that make up the statements
+// 3 + 4
+// 1991
+// true && false && !false
+
+// Statements is the whole thing.
+
+if (23 > 10) {
+    const str = `23 is bigger`;
+}
+
+// template literal we can only insert experessions, not statements
+
+const me = 'Jonas';
+console.log(`I'm ${2037 - 1991} years old ${me}`); 
+
+
+// Operator is an expression
+
+// Ternary Operator
+const age = 22;
+//age >= 18 ? console.log(`I like to drink wine`) :
+//     console.log(`I like to drink water`);
+
+drink = age >= 18 ? `wine` : `water`;
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = `wine`;
+} else {
+    drink2 = `water`;
+}
+console.log(drink2);
+
+console.log(`I like to drink ${drink = age >= 18 ? `wine` : `water`}`);
+*/

@@ -20,11 +20,11 @@ const description = `${country} is in ${continent}, and it's ${population} milli
 console.log(description);
 
 const lessThanAverage = averagePopulation - population;
-if (population > averagePopulation) {
-    console.log(`${country}'s population is above average`);
-} else {
-    console.log(`${country}'s population is ${lessThanAverage} million below average`);
-}
+// if (population > averagePopulation) {
+//     console.log(`${country}'s population is above average`);
+// } else {
+//     console.log(`${country}'s population is ${lessThanAverage} million below average`);
+// }
 
 // '9' - '5'; = 4
 // '19' - '13' + '17'; = 617
@@ -69,3 +69,4 @@ switch (language) {
         console.log(`Great language too :D`);
 }
 
+console.log(`${country}'s population is ${population > averagePopulation ? `above` : `below`} average`);
