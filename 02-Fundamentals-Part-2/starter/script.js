@@ -203,7 +203,7 @@ console.log(friends.includes(23));
 if (friends.includes('Steven')) {
     console.log('You have a friend called Steven');
 }
-*/
+
 
 const jonasArray = [
     'Jonas',
@@ -213,3 +213,197 @@ const jonasArray = [
     ['Michael', 'Peter', 'Steven']
 ];
 
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmdtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmdtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+// console.log(jonas.'last' + nameKey);
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+};
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Michael"
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmdtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // calcAge: function () {
+    //     // console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
+};
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+// Challenge
+// "Jonas is a 46-year old teacher. and he has a drivers license"
+console.log(jonas.getSummary());
+
+
+// console.log('Lifting weights repetition 1 🏋️');
+// console.log('Lifting weights repetition 2 🏋️');
+// console.log('Lifting weights repetition 3 🏋️');
+// console.log('Lifting weights repetition 4 🏋️');
+// console.log('Lifting weights repetition 5 🏋️');
+// console.log('Lifting weights repetition 6 🏋️');
+// console.log('Lifting weights repetition 7 🏋️');
+// console.log('Lifting weights repetition 8 🏋️');
+// console.log('Lifting weights repetition 9 🏋️');
+// console.log('Lifting weights repetition 10 🏋️');
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️`);
+};
+
+
+const jonas = [
+  'Jonas',
+  'Schmdtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+const types = [];
+
+// console.log(jonas[0])
+// console.log(jonas[1])
+// ...
+// console.log(jonas[4])
+// jonas[5] does NOT exist
+
+for (let i = 0; i < jonas.length; i++) {
+  // Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== 'string') continue;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === 'number') break;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+
+const jonas = [
+  'Jonas',
+  'Schmdtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+
+// const reverseJonas = [];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  // reverseJonas.push(jonas[i]);
+  console.log(i, jonas[i]);
+};
+// console.log(jonas);
+// console.log(reverseJonas);
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------- Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️`)
+  }
+}
+
+
+let rep = 1;
+while (rep <= 10) {
+  // console.log(`WHILE: Lifting weights repetition ${rep} 🏋️`);
+  rep++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Loop is about to end...');
+}
+*/
