@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
@@ -7,16 +7,20 @@ let avgKoalas = calcAverage(65, 54, 49);
 console.log(avgDolphins, avgKoalas);
 
 const checkWinner = function (avgDolphins, avgKoalas) {
-    if (avgDolphins > avgKoalas && avgDolphins > (avgKoalas * 2)) {
-        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgDolphins > avgKoalas && avgDolphins < (avgKoalas * 2)) {
-        console.log(`Dolphins scored higher, but did not win. (${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgDolphins < avgKoalas && (avgDolphins * 2) < avgKoalas) {
-        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
-    } else if (avgDolphins < avgKoalas && (avgDolphins * 2) > avgKoalas) {
-        console.log(`Koalas scored higher, but did not win. (${avgKoalas} vs. ${avgDolphins})`);
-    } else console.log("???");
-}
+  if (avgDolphins > avgKoalas && avgDolphins > avgKoalas * 2) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgDolphins > avgKoalas && avgDolphins < avgKoalas * 2) {
+    console.log(
+      `Dolphins scored higher, but did not win. (${avgDolphins} vs. ${avgKoalas})`
+    );
+  } else if (avgDolphins < avgKoalas && avgDolphins * 2 < avgKoalas) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  } else if (avgDolphins < avgKoalas && avgDolphins * 2 > avgKoalas) {
+    console.log(
+      `Koalas scored higher, but did not win. (${avgKoalas} vs. ${avgDolphins})`
+    );
+  } else console.log("???");
+};
 checkWinner(avgDolphins, avgKoalas);
 
 checkWinner(574, 111);
